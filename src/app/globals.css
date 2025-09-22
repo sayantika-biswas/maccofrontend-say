@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind utilities;
+@import "tailwindcss";
+
+@layer utilities {
+  .shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+body {
+  font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+ html, body {
+  height: 100%;
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar - Chrome, Safari */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar - Firefox */
+* {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+}
+
+.font-change{
+font-family: 'Satoshi', Arial, sans-serif;
+
+}
+
+/* Fade-in and move-up animation */
+.animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  
+
+
+  /* ------------- */
+  @layer utilities {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+  }
+
+
+/* global.css */
+/* global.css */
+/* global.css */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Add this in your global stylesheet */
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.service-card {
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
